@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/books.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Books</title>
+</head>
+<body>
+    <div class="main">
+        <div class="main_header">
+            <img src="photos/book.jpg" alt="img">
+            <form>
+                <input type="text" id="search" name="search" placeholder="Type here..." autocomplete="off"><br>
+                <input type="submit" value="Search" id="submit">
+            </form>
+        </div>
+        <div class="main_nav">
+            <div class="main_nav_list">
+                <div class="backBtn"><i class="fa-solid fa-arrow-left"></i></div>
+                <a href="index.html"><div>Home</div></a>
+                <div id="orange">Books</div>
+            </div>
+        </div>
+        <div class="main_content">
+            <div class="main_content_left">
+                <h2>Categories</h2>
+                <div id="allBooks">All books</div>
+                <div id="genres">Genres</div>
+                <div name="genreDropdown" id="genreDropdown">
+                </div>
+            </div>
+            <div class="main_content_right"></div>
+        </div>
+    </div>
+    <script src="js/books.js"></script> 
+    <script src="js/onloadBooks.js"></script>
+</body>
+</html>

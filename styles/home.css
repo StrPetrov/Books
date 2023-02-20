@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "raleway";
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+}
+.main .main_header {
+  width: 100%;
+  height: 130px;
+  background-color: rgb(119, 118, 118);
+  position: relative;
+}
+.main .main_header img {
+  width: 300px;
+  height: 130px;
+  margin-left: 15%;
+}
+.main .main_header form {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+}
+.main .main_header form #search {
+  width: 280px;
+  height: 50px;
+  border: 3px solid grey;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 25px;
+  color: orange;
+}
+.main .main_header form #search:focus {
+  border: none;
+}
+.main .main_header form #search::-moz-placeholder {
+  color: orange;
+}
+.main .main_header form #search::placeholder {
+  color: orange;
+}
+.main .main_header form #submit {
+  width: 100px;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 20px;
+  border: 3px solid grey;
+  background-color: white;
+  color: orange;
+  font-size: 18px;
+  cursor: pointer;
+}
+.main .main_header form #submit:hover {
+  background-color: rgb(229, 223, 223);
+  transition: 0.5s ease-in-out;
+}
+.main .main_nav {
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  position: relative;
+}
+.main .main_nav .main_nav_list {
+  width: 100px;
+  height: 60px;
+  margin-left: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .main_nav .main_nav_list a {
+  text-decoration: none;
+  color: black;
+}
+.main .main_nav .main_nav_list a div {
+  font-size: 30px;
+  margin-right: 40px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.main .main_nav .main_nav_list a #orange {
+  color: orange;
+}
+.main .main_nav label {
+  position: absolute;
+  right: 5%;
+  font-size: 25px;
+  margin-right: 20px;
+}
+.main .main_nav #adult_checker {
+  position: absolute;
+  right: 4%;
+  width: 20px;
+  height: 20px;
+}
+.main .main_content {
+  width: 100%;
+  height: auto;
+  padding-bottom: 50px;
+  background-color: rgb(238, 235, 235);
+}
+.main .main_content p #genreSearch {
+  height: 40px;
+  display: inline-block;
+  font-size: 30px;
+  width: 300px;
+  border-radius: 25px;
+  text-align: center;
+  border: 2px solid grey;
+}
+.main .main_content p i {
+  font-size: 30px;
+  margin-left: 15px;
+  color: grey;
+  cursor: pointer;
+}
+.main .main_content .rating {
+  margin-left: 15%;
+  padding-top: 30px;
+  font-size: 40px;
+}
+.main .main_content #padd {
+  padding-top: 70px;
+}
+.main .main_content hr {
+  width: 83%;
+  height: 2px;
+  border: none;
+  margin-left: 15%;
+  margin-top: 10px;
+  background-color: orange;
+}
+.main .main_content .section {
+  margin-top: 20px;
+  margin-left: 15%;
+  width: 83%;
+  height: auto;
+  display: flex;
+}
+.main .main_content .section .card {
+  flex-basis: 25%;
+  margin-right: 10px;
+  padding: 10px;
+  background-color: white;
+  cursor: pointer;
+}
+.main .main_content .section .card img {
+  width: 100%;
+  height: 80%;
+  border-radius: 20px;
+}
+.main .main_content .section .card h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+.main .main_content .section .card h3 {
+  text-align: center;
+  margin-top: 20px;
+}/*# sourceMappingURL=home.css.map */

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="main">
+        <div class="main_header">
+            <img src="photos/book.jpg" alt="img">
+            <form>
+                <input type="text" id="search" name="search" placeholder="Type here..." autocomplete="off"><br>
+                <input type="submit" value="Search" id="submit">
+            </form>
+        </div>
+        <div class="main_nav">
+            <div class="main_nav_list">
+                <a href="index.html"><div id="orange">Home</div></a>
+                <a href="books.html"><div>Books</div></a>
+                <input type="checkbox" id="adult_checker" name="adult_checker" checked>
+                <label for="adult_checker">Adult?</label>
+            </div>
+        </div>
+        <div class="main_content">
+            <p class="rating">The best rated books</p>
+            <hr>
+            <div class="section firstSection">
+            </div>
+            <p class="rating" id="padd">The most reviewed books by: <input type="text" id="genreSearch" placeholder="Type genre..."><i class="fa-solid fa-magnifying-glass searchBtn"></i></p>
+            <hr>
+            <div class="section secondSection">
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+    <script src="js/onloadIndex.js"></script>
+</body>
+</html>
