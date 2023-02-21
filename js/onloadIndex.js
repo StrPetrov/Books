@@ -47,7 +47,7 @@ let load = () => {
     
             minimalRatingValueFromTop4 = Math.min.apply(null, top4);
             
-            const bestRated = data.record.results.filter(book => book.rating >= minimalRatingValueFromTop4);
+            const bestRated = (data.record.results.filter(book => book.rating >= minimalRatingValueFromTop4)).slice(0, 4);
     
             bestRated.sort((a, b) => {
                 return a.rating - b.rating;
@@ -139,7 +139,7 @@ let load = () => {
     
                 minimalReviewValueFromTop4 = Math.min.apply(null, top4ReviewsArray);
     
-                mostReviewedByGenreArray = filteredByGenreArray.filter(book => book.reviews >= minimalReviewValueFromTop4);
+                mostReviewedByGenreArray = (filteredByGenreArray.filter(book => book.reviews >= minimalReviewValueFromTop4)).slice(0, 4);
                 
                 mostReviewedByGenreArray.sort((a, b) => {
                     return a.reviews - b.reviews;
