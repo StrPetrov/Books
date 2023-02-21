@@ -16,7 +16,7 @@ const provide = () => {
     let genreDropdown = document.querySelector('#genreDropdown');
     let oneGenreFiltered = [];
 
-        const stringifyedDataObject = sessionStorage.getItem('dataObject2');
+        const stringifyedDataObject = localStorage.getItem('dataObject2');
 
         const data = JSON.parse(stringifyedDataObject);
 
