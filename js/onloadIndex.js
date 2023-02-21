@@ -78,7 +78,7 @@ let load = () => {
             let randomArrayOfBooks = [];
     
             for(let z = 0; z < 4; z++) {
-                let randomNumber = Math.floor(Math.random() * 66);
+                let randomNumber = Math.floor(Math.random() * data.record.results.length);
                 randomArrayOfBooks.push(data.record.results[randomNumber]);
             }
     
