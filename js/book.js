@@ -13,18 +13,9 @@ const getData = () => {
         console.log(data);
         console.log(titleOfBookToDisplay);
 
-        data.record.results.forEach(book => {
-            let match = book.title.search(`${titleOfBookToDisplay }`)
+        bookToDisplay = data.record.results.filter(book => book.title === `${titleOfBookToDisplay}`);
 
-            if (match === -1) {
-                return;
-            }
-            else {
-                bookToDisplay = book;
-            }
-        })
-
-        console.log(bookToDisplay);
+        console.log(bookToDisplay[0]);
 
         data.record.results.forEach(book => {
             allRatingsArray.push(book.rating);
@@ -36,21 +27,21 @@ const getData = () => {
         console.log(average);
 
         imgContToRender.insertAdjacentHTML('afterbegin', `
-        <img src="${bookToDisplay.img}" alt="img">`)
+        <img src="${bookToDisplay[0].img}" alt="img">`)
 
         dataContToRender.insertAdjacentHTML('afterbegin', `
-        <h1>${bookToDisplay.title}</h1>
+        <h1>${bookToDisplay[0].title}</h1>
         <hr>
-        <p>Author: <span>${bookToDisplay.author}</span></p>
-        <p>Genre: <span>${bookToDisplay.genre}</span></p>
-        <p>Book format: <span>${bookToDisplay.bookformat}</span></p>
-        <p>Pages: <span>${bookToDisplay.pages}</span></p>
-        <p>Rating: <span>${bookToDisplay.rating}</span></p>
-        <p>Total ratings: <span>${bookToDisplay.totalratings}</span></p>
-        <p>Reviews: <span>${bookToDisplay.reviews}</span></p>
+        <p>Author: <span>${bookToDisplay[0].author}</span></p>
+        <p>Genre: <span>${bookToDisplay[0].genre}</span></p>
+        <p>Book format: <span>${bookToDisplay[0].bookformat}</span></p>
+        <p>Pages: <span>${bookToDisplay[0].pages}</span></p>
+        <p>Rating: <span>${bookToDisplay[0].rating}</span></p>
+        <p>Total ratings: <span>${bookToDisplay[0].totalratings}</span></p>
+        <p>Reviews: <span>${bookToDisplay[0].reviews}</span></p>
         <p id="block"></p>`)
 
-        if (bookToDisplay.rating > average) {
+        if (bookToDisplay[0].rating > average) {
             let p = document.querySelector('#block');
             p.style.backgroundColor = 'green';
             p.insertAdjacentText('afterbegin', 'Above average rating!');
@@ -61,7 +52,7 @@ const getData = () => {
             p.insertAdjacentText('afterbegin', 'Beyond average rating!');
         }
 
-        desc.insertAdjacentHTML('afterbegin', `${bookToDisplay.desc}`)
+        desc.insertAdjacentHTML('afterbegin', `${bookToDisplay[0].desc}`)
     
 }
 
