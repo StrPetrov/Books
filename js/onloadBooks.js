@@ -18,7 +18,7 @@ const provide2 = () => {
 
             const data = await response.json();
 
-            sessionStorage.setItem('dataObject2', JSON.stringify(data));
+            localStorage.setItem('dataObject2', JSON.stringify(data));
 
             // RENDERING ALL BOOKS ON LOAD
 
