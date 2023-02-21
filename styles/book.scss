@@ -114,10 +114,11 @@
             .img_cont {
                 flex: 25%;
                 height: 620px;
+                width: auto;
                 background-color: white;
 
                 img {
-                    width: 100%;
+                    width: 380px;
                     height: 100%;
                 }
             }
